@@ -1,0 +1,2033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-54D7LD2Y0H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-54D7LD2Y0H');
+    </script>
+    <link rel="icon" href="images/logos/khanda blue logo.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GURUDWARA SINGH SABHA - Greece</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f1eb;
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+
+        /* Hero Section with Background Image */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            background-image: url('images/logos/489926250_1213654847435267_4705507524214363292_n.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(128, 0, 0, 0.7), rgba(139, 69, 19, 0.6));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 900px;
+            padding: 40px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-logo {
+            width: 120px;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-title {
+            font-size: 5rem;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: 2.5rem;
+            color: #f5deb3;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .hero-location {
+            font-size: 1.5rem;
+            color: #ffe4b5;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .hero-description {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: #fff8dc;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 18px 45px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff8c00, #ffa500);
+            color: white;
+            box-shadow: 0 10px 30px rgba(255, 140, 0, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 140, 0, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(139, 69, 19, 0.95);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar li {
+            display: inline-block;
+        }
+
+        .navbar a {
+            color: #f5deb3;
+            text-decoration: none;
+            padding: 20px 30px;
+            display: block;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: #ff8c00;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .navbar a:hover {
+            color: #fff;
+            background: rgba(255, 140, 0, 0.2);
+        }
+
+        .navbar a:hover::after {
+            width: 80%;
+        }
+
+        /* Video Section */
+        .video-section {
+            text-align: center;
+            max-width: 1400px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            color: #800000;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #8b4513;
+        }
+        .video-container {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .video-container video {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(139, 69, 19, 0.3);
+        }
+
+        /* About Section - Compact */
+        .about-section {
+            background: linear-gradient(135deg, #8b4513 0%, #800000 100%);
+            padding: 80px 20px;
+            color: white;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .about-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .about-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-10px);
+        }
+
+        .about-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .about-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: #f5deb3;
+        }
+
+        .about-card p {
+            line-height: 1.8;
+            color: #ffe4b5;
+        }
+
+        /* Services Section */
+        .services-section {
+            background: #f5f1eb;
+            padding: 80px 20px;
+        }
+
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(139, 69, 19, 0.15);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border-left: 5px solid transparent;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #800000, #ff8c00);
+            transform: scaleY(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .service-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 15px 40px rgba(139, 69, 19, 0.25);
+        }
+
+        .service-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .badge-daily { background: #800000; }
+        .badge-weekly { background: #8b4513; }
+        .badge-always { background: #d2691e; }
+        .badge-seasonal { background: #cd853f; }
+        .badge-request { background: #ff8c00; }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            color: #800000;
+            margin-bottom: 10px;
+        }
+
+        .service-time {
+            color: #ff8c00;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .service-card p {
+            color: #5a4a42;
+            line-height: 1.8;
+        }
+
+        /* Facts Section */
+        .facts-section {
+            background: linear-gradient(135deg, #f5deb3 0%, #deb887 100%);
+            padding: 80px 20px;
+        }
+
+        .facts-grid {
+            max-width: 1400px;
+            margin: 50px auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .fact-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(139, 69, 19, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .fact-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(139, 69, 19, 0.3);
+        }
+
+        .fact-number {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .fact-label {
+            font-size: 1.2rem;
+            color: #800000;
+            font-weight: 600;
+        }
+
+        /* Events Section */
+        .events-section {
+            max-width: 1400px;
+            margin: 80px auto;
+            padding: 40px 20px;
+        }
+
+        .events-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .events-column h3 {
+            font-size: 2rem;
+            color: #800000;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #ff8c00;
+        }
+
+        .event-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(139, 69, 19, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .event-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(139, 69, 19, 0.2);
+        }
+
+        .event-bullet {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 6px;
+        }
+
+        .bullet-maroon { background: #800000; }
+        .bullet-brown { background: #8b4513; }
+        .bullet-orange { background: #ff8c00; }
+
+        .event-item p {
+            color: #5a4a42;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            background: linear-gradient(135deg, #f5f1eb 0%, #e8dfd0 100%);
+            padding: 80px 20px;
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .gallery-header h1 {
+            font-size: 3rem;
+            color: #800000;
+            margin-bottom: 10px;
+        }
+
+        .gallery-header p {
+            color: #8b4513;
+            font-size: 1.2rem;
+        }
+
+        .gallery-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(139, 69, 19, 0.15);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(139, 69, 19, 0.3);
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(128, 0, 0, 0.4), rgba(255, 140, 0, 0.4));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 1;
+        }
+
+        .gallery-item:hover::before {
+            opacity: 1;
+        }
+
+        .image-wrapper {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+            display: block;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.15) rotate(2deg);
+        }
+
+        .description {
+            padding: 25px;
+            text-align: center;
+            background: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .description h3 {
+            color: #800000;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .view-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: rgba(255, 255, 255, 0.95);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            transition: all 0.3s ease;
+            font-size: 2rem;
+        }
+
+        .gallery-item:hover .view-icon {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .events-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.8rem;
+            }
+
+            .hero-location {
+                font-size: 1.2rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .navbar ul {
+                flex-wrap: wrap;
+                gap: 0;
+                padding: 5px 0;
+            }
+            .navbar.scrolled {
+                padding: 0;
+            }
+
+            .navbar.scrolled a {
+                padding: 8px 12px;
+                font-size: 0.85rem;
+            }
+
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        
+
+        /* Album Gallery System */
+        .album-categories {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 80px;
+        }
+
+        .category-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .category-header h2 {
+            font-size: 2.5rem;
+            color: #800000;
+            margin-bottom: 10px;
+        }
+
+        .category-header p {
+            font-size: 1.2rem;
+            color: #8b4513;
+        }
+
+        .albums-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .album-card {
+            background: white;
+            border-radius: 50px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(139, 69, 19, 0.15);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .album-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(139, 69, 19, 0.3);
+        }
+
+        .album-cover {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .album-cover img {
+            width: 100%;
+            height: 110%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .album-card:hover .album-cover img {
+            transform: scale(1.1);
+        }
+
+        .album-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(110, 51, 51, 0.8) 0%, rgba(155, 106, 72, 0.8) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .album-card:hover .album-overlay {
+            opacity: 1;
+        }
+
+        .album-info {
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .album-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .album-info p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .view-album-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .view-album-btn:hover {
+            background: white;
+            color: #800000;
+        }
+
+        /* Album Modal */
+        .album-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+            align-items: center;
+            justify-content: center;
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            background: white;
+            margin:  auto;
+            padding: 0;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 1200px;
+            max-height: 90vh;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position:relative
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #800000 0%, #8b4513 100%);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        .close-btn {
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            color: #ffd700;
+        }
+
+        .modal-body {
+            padding: 30px;
+            max-height: calc(90vh - 100px);
+            overflow-y: auto;
+        }
+
+        .modal-photos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .modal-photo-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-photo-item:hover {
+            transform: scale(1.05);
+        }
+
+        .modal-photo-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .photo-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(85, 64, 64, 0.7);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-photo-item:hover .photo-overlay {
+            opacity: 1;
+        }
+
+        .view-icon {
+            color: white;
+            font-size: 2rem;
+        }
+
+        /* Responsive Design for Album Gallery */
+        @media (max-width: 768px) {
+            .albums-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 20px;
+            }
+            .category-header h2 {
+                font-size: 2rem;
+            }
+            .modal-content {
+                width: 95%;
+            }
+            .modal-photos-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .albums-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .category-header h2 {
+                font-size: 1.8rem;
+            }
+            .modal-content {
+                width: 95%;
+                margin: 20px auto;
+                max-height: 85vh;
+            }
+            .modal-header {
+                padding: 15px 20px;
+            }
+            .modal-header h2 {
+                font-size: 1.4rem;
+            }
+            .modal-body {
+                padding: 15px;
+                max-height: calc(85vh - 60px); 
+            }
+            .modal-photos-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .album-info h3 {
+                font-size: 1.5rem;
+            }
+            .album-cover {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section with Background Image -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <img src="images/logos/360_F_98369651_mqUPOb02CfF6jNAH0Vxm47EtDr04smcU.webp" alt="Khanda" class="hero-logo">
+            <h1 class="hero-title">ਗੁਰੂਦੁਆਰਾ ਸਿੰਘ ਸਭਾ</h1>
+            <h2 class="hero-subtitle">Mata Jeet Kaur Ji</h2>
+            <p class="hero-location">Pagalochori, Crete, Greece</p>
+            <p class="hero-description">Welcome to our spiritual home in the heart of Crete, Greece<br>A place of worship, community, and service where all are welcome to experience the peace and teachings of Guru Nanak Dev Ji</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary">Visit Us</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home" onclick="window.scrollTo({top: 0,behavior: 'smooth'});return false;">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Video Section -->
+    <div class="video-section">
+        <div class="section-header">
+            <h2>Experience Our Gurudwara</h2>
+            <p>Take a virtual tour of our sacred space</p>
+        </div>
+        <div class="video-container">
+            <video src="Gurudwara Singh Sabha mata Jeet Kaur ji - Greece।.mp4" controls autoplay muted></video>
+    </div>
+
+    <!-- About Section - Compact -->
+    <div class="about-section" id="about">
+        <div class="about-content">
+            <h2>Welcome to Our Gurudwara</h2>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 20px;">A sacred space where everyone is welcome, regardless of faith or background</p>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">🙏</div>
+                    <h3>Prayer & Worship</h3>
+                    <p>Daily kirtan and spiritual guidance</p>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-icon">🤝</div>
+                    <h3>Community</h3>
+                    <p>United in peace and brotherhood</p>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-icon">🍛</div>
+                    <h3>Free Langar</h3>
+                    <p>Meals for all, served with love</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="services-section" id="services">
+        <div class="section-header">
+            <h2>Services & Programs</h2>
+            <p>Join us for worship, learning, and community service</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="service-badge badge-daily">Daily</span>
+                <h3>Daily Prayers</h3>
+                <p class="service-time">Morning: 6:00 AM | Evening: 7:00 PM</p>
+                <p>Join us for daily prayers and meditation sessions in the peaceful atmosphere of our Darbar Sahib</p>
+            </div>
+
+            <div class="service-card">
+                <span class="service-badge badge-weekly">Weekly</span>
+                <h3>Sunday Diwan</h3>
+                <p class="service-time">10:00 AM - 12:00 PM</p>
+                <p>Community worship with kirtan, prayer, and langar. Experience the spiritual gathering of our Sangat</p>
+            </div>
+
+            <div class="service-card">
+                <span class="service-badge badge-weekly">Weekly</span>
+                <h3>Gurbani Classes</h3>
+                <p class="service-time">Saturdays 4:00 PM</p>
+                <p>Learn to read Gurmukhi and understand Gurbani. Open to all ages and experience levels</p>
+            </div>
+
+            <div class="service-card">
+                <span class="service-badge badge-always">Always</span>
+                <h3>Langar Service</h3>
+                <p class="service-time">After all programs</p>
+                <p>Free community meals for all visitors. Everyone welcome regardless of background or beliefs</p>
+            </div>
+
+            <div class="service-card">
+                <span class="service-badge badge-seasonal">Seasonal</span>
+                <h3>Special Celebrations</h3>
+                <p class="service-time">Various times</p>
+                <p>Gurpurabs, Vaisakhi, Diwali, and other festivals celebrated with special programs</p>
+            </div>
+
+            <div class="service-card">
+                <span class="service-badge badge-request">On Request</span>
+                <h3>Wedding Ceremonies</h3>
+                <p class="service-time">By appointment</p>
+                <p>Traditional Anand Karaj Sikh wedding ceremonies in the presence of Guru Granth Sahib</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Facts Section -->
+    <div class="facts-section">
+        <div class="section-header">
+            <h2>Gurudwara Traditions</h2>
+            <p>Sacred customs observed with respect and devotion</p>
+        </div>
+        <div class="facts-grid">
+            <div class="fact-card">
+                <div class="fact-number">🪯</div>
+                <div class="fact-label">Symbol of Sikhism</div>
+            </div>
+            <div class="fact-card">
+                <div class="fact-number">👳</div>
+                <div class="fact-label">Cover Your Head</div>
+            </div>
+            <div class="fact-card">
+                <div class="fact-number">👟</div>
+                <div class="fact-label">Remove Shoes</div>
+            </div>
+            <div class="fact-card">
+                <div class="fact-number">🙏</div>
+                <div class="fact-label">Sit as Equals</div>
+            </div>
+            <div class="fact-card">
+                <div class="fact-number">🌏</div>
+                <div class="fact-label">All Faiths Welcome</div>
+            </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Events Section -->
+    <div class="events-section">
+        <div class="section-header">
+            <h2>Events & Community Services</h2>
+            <p>Celebrating our faith and serving our community</p>
+        </div>
+        
+        <div class="events-content">
+            <div class="events-column">
+                <h3>Upcoming Celebrations</h3>
+                <div class="event-item">
+                    <div class="event-bullet bullet-maroon"></div>
+                    <p><strong>Guru Nanak Gurpurab</strong> - November<br>Celebrating the birth of Guru Nanak Dev Ji</p>
+                </div>
+                <div class="event-item">
+                    <div class="event-bullet bullet-brown"></div>
+                    <p><strong>Vaisakhi Festival</strong> - April<br>Sikh New Year and harvest festival</p>
+                </div>
+                <div class="event-item">
+                    <div class="event-bullet bullet-orange"></div>
+                    <p><strong>Diwali Celebration</strong> - October/November<br>Festival of lights - Bandi Chhor Divas</p>
+                </div>
+                <div class="event-item">
+                    <div class="event-bullet bullet-maroon"></div>
+                    <p><strong>Hola Mohalla</strong> - March<br>Celebrating Sikh martial traditions</p>
+                </div>
+            </div>
+
+            <div class="events-column">
+                <h3>Community Services</h3>
+                <div class="event-item">
+                    <div class="event-bullet bullet-brown"></div>
+                    <p><strong>Spiritual Counseling</strong><br>Personal guidance and support available</p>
+                </div>
+                <div class="event-item">
+                    <div class="event-bullet bullet-maroon"></div>
+                    <p><strong>Community Support</strong><br>Assistance for families in need</p>
+                </div>
+                <div class="event-item">
+                    <div class="event-bullet bullet-orange"></div>
+                    <p><strong>Cultural Education</strong><br>Teaching children Sikh heritage</p>
+                </div>
+                <div class="event-item">
+                    <div class="event-bullet bullet-brown"></div>
+                    <p><strong>Interfaith Dialogue</strong><br>Building bridges with other faiths</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery-section" id="gallery">
+        <div class="gallery-header">
+            <h1>🪯 Photo Gallery</h1>
+            <p>Sacred Moments & Community Life</p>
+        </div>
+
+        <!-- Album Categories -->
+        <div class="album-categories">
+            <!-- Events & Celebrations -->
+            <div class="category-section">
+    <div class="category-header">
+        <h2>🎉 Events & Celebrations</h2>
+        <p>Community gatherings and special celebrations</p>
+    </div>
+    <div class="albums-grid">
+        
+        <!-- Nagar Kirtan 2013 -->
+        <div class="album-card" onclick="openAlbum('nagar-kirtan-2013')">
+            <div class="album-cover">
+                <img src="ALL-GURDWARA-IMAGES/nagar kirtan 2013/509596869_24343383158578454_2130133757860387646_n.jpg" alt="Nagar Kirtan 2013">
+                <div class="album-overlay">
+                    <div class="album-info">
+                        <h3>Nagar Kirtan 2013</h3>
+                        <p>12 Photos</p>
+                        <span class="view-album-btn">View Album</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nagar Kirtan 2025 -->
+        <div class="album-card" onclick="openAlbum('nagar-kirtan-2025')">
+            <div class="album-cover">
+                <img src="ALL-GURDWARA-IMAGES/nagar kirtan 2025/6.jpg" alt="Nagar Kirtan 2025">
+                <div class="album-overlay">
+                    <div class="album-info">
+                        <h3>Nagar Kirtan 2025</h3>
+                        <p>42 Photos</p>
+                        <span class="view-album-btn">View Album</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guru Nanak Dev Ji 550th -->
+        <div class="album-card" onclick="openAlbum('guru-nanak-550')">
+            <div class="album-cover">
+                <img src="ALL-GURDWARA-IMAGES/Guru Nanak Dev Ji 550th-2019/550 photo.png" alt="Guru Nanak Dev Ji 550th">
+                <div class="album-overlay">
+                    <div class="album-info">
+                        <h3>Guru Nanak Dev Ji 550th-2019</h3>
+                        <p>8 Photos</p>
+                        <span class="view-album-btn">View Album</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kirtan Sessions -->
+        <div class="album-card" onclick="openAlbum('kirtan')">
+            <div class="album-cover">
+                <img src="ALL-GURDWARA-IMAGES/kirtan/507377814_24265855812997856_1281774296366385254_n.jpg" alt="Kirtan Sessions">
+                <div class="album-overlay">
+                    <div class="album-info">
+                        <h3>Kirtan Sessions</h3>
+                        <p>20 Photos</p>
+                        <span class="view-album-btn">View Album</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+            <!-- Religious Ceremonies -->
+            <div class="category-section">
+                <div class="category-header">
+                    <h2>🙏 Religious Ceremonies</h2>
+                    <p>Sacred rituals and spiritual gatherings</p>
+                    </div>
+                <div class="albums-grid">
+                    <!-- Akhand Path Sahib 2014 -->
+                    <div class="album-card" onclick="openAlbum('akhand-path-2014')">
+                        <div class="album-cover">
+                            <img src="ALL-GURDWARA-IMAGES/akhand path sahib 2014/4.jpg" alt="Akhand Path Sahib 2014">
+                            <div class="album-overlay">
+                                <div class="album-info">
+                                    <h3>Akhand Path Sahib 2014</h3>
+                                    <p>13 Photos</p>
+                                    <div class="view-album-btn">View Album</div>
+                                </div>
+                            </div>
+                </div>
+                
+            </div>
+
+                    <!-- Amrit Sanchar 2012 -->
+                    <div class="album-card" onclick="openAlbum('amrit-sanchar-2012')">
+                        <div class="album-cover">
+                            <img src="ALL-GURDWARA-IMAGES/amrit sanchar 2012/2.jpg" alt="Amrit Sanchar 2012">
+                            <div class="album-overlay">
+                                <div class="album-info">
+                                    <h3>Amrit Sanchar 2012</h3>
+                                    <p>10 Photos</p>
+                                    <div class="view-album-btn">View Album</div>
+                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- People & Performances -->
+            <div class="category-section">
+                <div class="category-header">
+                    <h2>🎵 People & Performances</h2>
+                    <p>Kirtanis, Katha sessions and community gatherings</p>
+                    </div>
+                <div class="albums-grid">
+                    <!-- Giani Thakur Singh Ji 2011 -->
+                    <div class="album-card" onclick="openAlbum('giani-thakur-singh-2011')">
+                        <div class="album-cover">
+                            <img src="ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/31.jpg" alt="Giani Thakur Singh Ji 2011">
+                            <div class="album-overlay">
+                                <div class="album-info">
+                                    <h3>Giani Thakur Singh Ji 2011</h3>
+                                    <p>35 Photos</p>
+                                    <div class="view-album-btn">View Album</div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+
+                    <!-- Sangat -->
+                    <div class="album-card" onclick="openAlbum('sangat')">
+                        <div class="album-cover">
+                            <img src="ALL-GURDWARA-IMAGES/sangat/1.jpg" alt="Sangat Gatherings">
+                            <div class="album-overlay">
+                                <div class="album-info">
+                                    <h3>Sangat Gatherings</h3>
+                                    <p>195 Photos</p>
+                                    <div class="view-album-btn">View Album</div>
+                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Building Architecture -->
+            <div class="category-section">
+                <div class="category-header">
+                    <h2>🏗️ Building Architecture</h2>
+                    <p>Gurudwara construction and development over the years</p>
+                    </div>
+                <div class="albums-grid">
+                    <!-- Going New Building 2013 -->
+                    <div class="album-card" onclick="openAlbum('going-new-building-2013')">
+                        <div class="album-cover">
+                            <img src="ALL-GURDWARA-IMAGES/going new building 2013/33.jpg" alt="Going To New Building 2013">
+                            <div class="album-overlay">
+                                <div class="album-info">
+                                    <h3>Going To New Building 2013</h3>
+                                    <p>65 Photos</p>
+                                    <div class="view-album-btn">View Album</div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+
+                    <!-- Arc Gurdwara 2011 -->
+                    <div class="album-card" onclick="openAlbum('arc-gurdwara-2011')">
+                        <div class="album-cover">
+                            <img src="ALL-GURDWARA-IMAGES/arc gurdwara 2011/85.jpg" alt=" Gurdwara 2011">
+                            <div class="album-overlay">
+                                <div class="album-info">
+                                    <h3>    Gurdwara Construction 2011</h3>
+                                    <p>Architectural Design</p>
+                                    <div class="view-album-btn">View Album</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Album Modal -->
+        <div id="album-modal" class="album-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modal-title">Album Title</h2>
+                    <span class="close-btn" onclick="closeAlbum()">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div id="modal-photos" class="modal-photos-grid">
+                        <!-- Photos will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+        // Album data - Simplified for testing
+        const albums = {
+            'nagar-kirtan-2013': {
+                title: 'Nagar Kirtan 2013',
+                photos: [
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2013/509596869_24343383158578454_2130133757860387646_n.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2013/510002590_24343383255245111_7415726932268931470_n.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2013/510150250_24339308062319297_7060102081685265834_n.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2013/510241253_24343383138578456_826780061624704208_n.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2013/510408300_24339310382319065_1210890048324226952_n.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2013/510474783_24339534858963284_4881839822278920712_n.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2013/510534975_24339534995629937_4900511947340293601_n.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2013/510669452_24339534875629949_5243151135171317608_n.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2013/510732380_24339535042296599_2464727149206462891_n.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2013/510753740_24339534738963296_4162623433890766503_n.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2013/510798389_24339535015629935_1641501579263831362_n.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2013/510894950_24339534912296612_4228638385946882590_n.jpg'
+                ]
+            },'nagar-kirtan-2025': {
+                title: 'Nagar Kirtan 2025',
+                photos: [
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/1.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/2.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/3.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/4.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/5.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/6.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/7.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/8.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/9.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/10.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/11.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/12.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/13.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/14.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/15.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/16.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/17.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/18.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/19.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/20.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/21.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/22.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/23.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/24.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/25.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/26.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/27.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/28.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/29.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/30.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/31.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/32.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/33.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/34.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/35.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/36.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/37.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/38.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/39.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/40.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/41.jpg',
+                    'ALL-GURDWARA-IMAGES/nagar kirtan 2025/42.jpg',
+
+        // ... up to 42 photos based on your screenshot
+                ]
+            },
+            'guru-nanak-550': {
+                title: 'Guru Nanak Dev Ji 550th - 2019',
+                photos: [
+                    'ALL-GURDWARA-IMAGES/Guru Nanak Dev Ji 550th-2019/550 photo.png',
+                    'ALL-GURDWARA-IMAGES/Guru Nanak Dev Ji 550th-2019/behind darbar.png',
+                    'ALL-GURDWARA-IMAGES/Guru Nanak Dev Ji 550th-2019/darbar photo.png',
+                    'ALL-GURDWARA-IMAGES/Guru Nanak Dev Ji 550th-2019/katha 1.png',
+                    'ALL-GURDWARA-IMAGES/Guru Nanak Dev Ji 550th-2019/katha 3.png',
+                    'ALL-GURDWARA-IMAGES/Guru Nanak Dev Ji 550th-2019/katha blue.png',
+                    'ALL-GURDWARA-IMAGES/Guru Nanak Dev Ji 550th-2019/langar hall (2).png',
+                    'ALL-GURDWARA-IMAGES/Guru Nanak Dev Ji 550th-2019/langar hall.png'
+                ]
+            },
+            'kirtan': {
+                title: 'Kirtan Sessions',
+                photos: [
+                    'ALL-GURDWARA-IMAGES/kirtan/507377814_24265855812997856_1281774296366385254_n.jpg',
+                    'ALL-GURDWARA-IMAGES/kirtan/507542758_24265855619664542_5838340492522073447_n.jpg',
+                    'ALL-GURDWARA-IMAGES/kirtan/507542758_24265855749664529_3033979171666008788_n.jpg',
+                    'ALL-GURDWARA-IMAGES/kirtan/507786609_24265855862997851_1960259872821786409_n.jpg',
+                    'ALL-GURDWARA-IMAGES/kirtan/507953832_24265855659664538_7773684434656528445_n.jpg',
+                    'ALL-GURDWARA-IMAGES/kirtan/507973729_24265855969664507_3586849984575953176_n.jpg',
+                    'ALL-GURDWARA-IMAGES/kirtan/508032459_24265855802997857_5440426846970311858_n.jpg',
+                    'ALL-GURDWARA-IMAGES/kirtan/508042268_24265855779664526_5907170045530632957_n.jpg',
+                    'ALL-GURDWARA-IMAGES/kirtan/508068273_24265855599664544_8299308859409191428_n.jpg',
+                    'ALL-GURDWARA-IMAGES/kirtan/508105365_24265855849664519_9148683212664155541_n.jpg',
+                    'ALL-GURDWARA-IMAGES/kirtan/508107782_24265855609664543_4628401942971935655_n.jpg',
+                    'ALL-GURDWARA-IMAGES/kirtan/508109249_24265855669664537_2058844665010050109_n.jpg',
+                    'ALL-GURDWARA-IMAGES/kirtan/508110043_24265855796331191_5849134741647884268_n.jpg',
+                    'ALL-GURDWARA-IMAGES/kirtan/508169154_24265855746331196_3231067803156639934_n.jpg',
+                    'ALL-GURDWARA-IMAGES/kirtan/508169629_24265855809664523_6288018254925914266_n.jpg',
+                    'ALL-GURDWARA-IMAGES/kirtan/508180453_24265855786331192_3104210601102009089_n.jpg',
+                    'ALL-GURDWARA-IMAGES/kirtan/508277559_24265855639664540_5699410103982455324_n.jpg',
+                    'ALL-GURDWARA-IMAGES/kirtan/508369390_24265855769664527_1022885137837076782_n.jpg',
+                    'ALL-GURDWARA-IMAGES/kirtan/508567518_24278693991714038_4120652452973898997_n.jpg',
+                    'ALL-GURDWARA-IMAGES/kirtan/508790940_24278693998380704_3627826825363372096_n.jpg'
+                ]
+            },
+            'akhand-path-2014': {
+                title: 'Akhand Path Sahib 2014',
+                photos: ['ALL-GURDWARA-IMAGES/akhand path sahib 2014/1.jpg',
+                'ALL-GURDWARA-IMAGES/akhand path sahib 2014/2.jpg',
+                'ALL-GURDWARA-IMAGES/akhand path sahib 2014/3.jpg',
+                'ALL-GURDWARA-IMAGES/akhand path sahib 2014/4.jpg',
+                'ALL-GURDWARA-IMAGES/akhand path sahib 2014/5.jpg',
+                'ALL-GURDWARA-IMAGES/akhand path sahib 2014/6.jpg',
+                'ALL-GURDWARA-IMAGES/akhand path sahib 2014/7.jpg',
+                'ALL-GURDWARA-IMAGES/akhand path sahib 2014/8.jpg',
+                'ALL-GURDWARA-IMAGES/akhand path sahib 2014/9.jpg',
+                'ALL-GURDWARA-IMAGES/akhand path sahib 2014/10.jpg',
+                'ALL-GURDWARA-IMAGES/akhand path sahib 2014/11.jpg',
+                'ALL-GURDWARA-IMAGES/akhand path sahib 2014/12.jpg',
+                'ALL-GURDWARA-IMAGES/akhand path sahib 2014/13.jpg',
+            ]
+            },
+            'amrit-sanchar-2012': {
+                title: 'Amrit Sanchar 2012',
+                photos: ['ALL-GURDWARA-IMAGES/amrit sanchar 2012/1.jpg',
+                'ALL-GURDWARA-IMAGES/amrit sanchar 2012/2.jpg',
+                'ALL-GURDWARA-IMAGES/amrit sanchar 2012/3.jpg',
+                'ALL-GURDWARA-IMAGES/amrit sanchar 2012/4.jpg',
+                'ALL-GURDWARA-IMAGES/amrit sanchar 2012/5.jpg',
+                'ALL-GURDWARA-IMAGES/amrit sanchar 2012/6.jpg',
+                'ALL-GURDWARA-IMAGES/amrit sanchar 2012/7.jpg',
+                'ALL-GURDWARA-IMAGES/amrit sanchar 2012/8.jpg',
+                'ALL-GURDWARA-IMAGES/amrit sanchar 2012/9.jpg',
+                'ALL-GURDWARA-IMAGES/amrit sanchar 2012/10.jpg',
+                    
+                ]
+            },
+            'giani-thakur-singh-2011': {
+                title: 'Giani Thakur Singh Ji 2011',
+                photos: ['ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/1.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/2.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/3.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/4.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/5.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/6.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/7.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/8.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/9.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/10.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/11.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/12.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/13.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/14.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/15.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/16.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/17.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/18.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/19.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/20.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/21.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/22.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/23.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/24.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/25.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/26.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/27.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/28.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/29.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/30.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/31.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/32.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/33.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/34.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/35.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/36.jpg',
+                    'ALL-GURDWARA-IMAGES/giani thakur singh ji 2011/37.jpg',
+                    
+                ]
+            },
+            'sangat': {
+                title: 'Sangat Gatherings',
+                photos: ['ALL-GURDWARA-IMAGES/sangat/1.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/2.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/3.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/4.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/5.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/6.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/7.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/8.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/9.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/10.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/11.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/12.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/13.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/14.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/15.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/16.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/17.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/18.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/19.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/20.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/21.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/22.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/23.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/24.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/25.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/26.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/27.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/28.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/29.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/30.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/31.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/32.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/33.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/34.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/35.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/36.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/37.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/38.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/39.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/40.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/41.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/42.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/43.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/44.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/45.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/46.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/47.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/48.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/49.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/50.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/51.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/52.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/53.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/54.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/55.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/56.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/57.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/58.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/59.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/60.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/61.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/62.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/63.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/64.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/65.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/66.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/67.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/68.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/69.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/70.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/71.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/72.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/73.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/74.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/75.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/76.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/77.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/78.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/79.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/80.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/81.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/82.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/83.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/84.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/85.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/86.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/87.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/88.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/89.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/90.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/91.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/92.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/93.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/94.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/95.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/96.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/97.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/99.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/100.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/101.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/102.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/103.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/104.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/105.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/106.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/107.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/108.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/109.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/110.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/111.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/112.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/113.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/114.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/115.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/116.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/117.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/118.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/119.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/120.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/121.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/122.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/123.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/124.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/125.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/126.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/127.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/128.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/129.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/130.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/131.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/132.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/133.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/134.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/135.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/136.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/137.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/138.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/139.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/140.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/142.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/143.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/144.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/145.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/146.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/147.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/148.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/149.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/150.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/152.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/153.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/154.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/155.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/156.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/157.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/158.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/159.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/160.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/161.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/162.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/163.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/164.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/165.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/166.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/167.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/168.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/170.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/171.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/172.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/173.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/174.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/175.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/176.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/177.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/178.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/179.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/180.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/181.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/182.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/183.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/184.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/185.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/186.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/187.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/188.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/189.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/190.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/191.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/193.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/194.jpg',
+                'ALL-GURDWARA-IMAGES/sangat/195.jpg',
+                
+
+                    
+                ]
+            },
+            'going-new-building-2013': {
+                title: 'Going New Building 2013',
+                photos: ['ALL-GURDWARA-IMAGES/going new building 2013/1.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/2.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/3.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/4.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/5.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/6.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/7.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/8.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/9.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/10.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/11.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/12.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/13.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/14.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/15.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/16.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/17.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/18.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/19.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/20.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/21.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/22.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/23.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/24.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/25.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/26.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/28.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/29.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/30.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/31.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/32.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/33.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/34.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/35.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/36.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/37.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/38.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/39.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/40.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/41.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/42.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/43.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/44.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/45.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/46.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/47.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/48.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/49.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/50.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/51.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/52.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/53.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/54.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/55.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/56.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/57.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/58.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/59.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/60.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/61.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/62.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/63.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/64.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/65.jpg',
+                    'ALL-GURDWARA-IMAGES/going new building 2013/66.jpg',
+                    
+
+                ]
+            },
+            'arc-gurdwara-2011': {
+                title: 'Arc Gurdwara 2011',
+                photos: ['ALL-GURDWARA-IMAGES/arc gurdwara 2011/1.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/2.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/3.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/4.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/5.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/6.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/7.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/8.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/9.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/10.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/11.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/12.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/13.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/14.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/15.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/16.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/17.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/18.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/19.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/20.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/21.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/22.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/23.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/24.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/25.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/26.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/27.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/28.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/29.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/30.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/31.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/32.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/33.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/34.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/35.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/36.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/37.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/38.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/39.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/40.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/41.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/42.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/43.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/44.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/45.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/46.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/47.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/48.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/49.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/50.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/51.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/52.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/53.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/54.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/55.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/56.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/57.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/58.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/59.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/60.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/61.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/62.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/63.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/64.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/65.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/66.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/67.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/68.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/69.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/70.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/71.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/72.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/73.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/74.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/75.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/76.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/77.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/78.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/79.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/80.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/81.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/82.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/83.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/84.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/85.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/86.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/87.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/88.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/89.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/90.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/91.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/92.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/93.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/94.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/95.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/96.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/97.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/98.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/99.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/100.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/10.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/111.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/112.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/113.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/114.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/115.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/116.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/117.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/118.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/119.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/120.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/121.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/122.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/123.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/124.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/125.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/126.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/127.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/128.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/129.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/130.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/131.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/132.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/133.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/134.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/135.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/136.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/137.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/138.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/139.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/140.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/141.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/142.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/143.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/144.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/145.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/146.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/147.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/148.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/149.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/150.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/151.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/152.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/153.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/154.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/155.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/156.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/157.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/158.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/159.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/160.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/161.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/162.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/163.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/164.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/165.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/166.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/167.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/168.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/169.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/170.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/171.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/172.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/173.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/174.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/175.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/176.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/177.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/178.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/179.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/180.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/181.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/182.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/183.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/184.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/185.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/186.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/187.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/188.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/189.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/190.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/191.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/192.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/193.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/194.jpg',
+                    'ALL-GURDWARA-IMAGES/arc gurdwara 2011/195.jpg',
+
+
+                ]
+            }
+        };
+        let scrollPosition = 0;
+
+        function openAlbum(albumId) {
+            const album = albums[albumId];
+            if (!album) return;
+
+            const modal = document.getElementById('album-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalPhotos = document.getElementById('modal-photos');
+
+            modalTitle.textContent = album.title;
+            modalPhotos.innerHTML = '';
+
+            album.photos.forEach(photo => {
+                const photoDiv = document.createElement('div');
+                photoDiv.className = 'modal-photo-item';
+                photoDiv.innerHTML = `
+                    <a href="${photo}" target="_blank">
+                        <img src="${photo}" alt="${album.title}" loading="lazy">
+                        <div class="photo-overlay">
+                            <div class="view-icon">🔍</div>
+                        </div>
+                    </a>
+                `;
+                modalPhotos.appendChild(photoDiv);
+            });
+
+            scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollPosition}px`;
+            document.body.style.width = '100%';
+
+            modal.style.display = 'flex';
+            document.querySelector('.modal-body').scrollTop = 0;
+        }
+
+        function closeAlbum() {
+            const modal = document.getElementById('album-modal');
+            modal.style.display = 'none';
+            
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            window.scrollTo(0, scrollPosition);
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('album-modal');
+            if (event.target === modal) {
+                closeAlbum();
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeAlbum();
+            }
+        });
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            }  else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+</script>
+
+</body>
+</html>
