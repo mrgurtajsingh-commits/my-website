@@ -6,6 +6,11 @@
 let currentAlbum = [];
 let currentImageIndex = 0;
 let scrollPosition = 0;
+let swipeStartX = 0;
+let activePointerId = null;
+let isSwiping = false;
+let swipeInitialized = false;
+const SWIPE_THRESHOLD = 60;
 
 const albums = {
     'nagar-kirtan-2013': {
@@ -185,6 +190,9 @@ function openFullscreen(index) {
     const currentCounter = document.getElementById('current-image');
     const totalCounter = document.getElementById('total-images');
 
+    initializeSwipeNavigation();
+    resetSwipePosition();
+
     img.src = currentAlbum[index];
     currentCounter.textContent = index + 1;
     totalCounter.textContent = currentAlbum.length;
@@ -194,6 +202,7 @@ function openFullscreen(index) {
 
 function closeFullscreen() {
     const viewer = document.getElementById('fullscreen-viewer');
+    resetSwipePosition();
     viewer.style.display = 'none';
 }
 
@@ -209,8 +218,69 @@ function navigateImage(direction) {
     const img = document.getElementById('fullscreen-image');
     const currentCounter = document.getElementById('current-image');
 
+    resetSwipePosition();
     img.src = currentAlbum[currentImageIndex];
     currentCounter.textContent = currentImageIndex + 1;
+}
+
+function resetSwipePosition() {
+    const img = document.getElementById('fullscreen-image');
+    if (!img) return;
+    img.style.transition = '';
+    img.style.transform = '';
+}
+
+function initializeSwipeNavigation() {
+    if (swipeInitialized) return;
+
+    const viewer = document.getElementById('fullscreen-viewer');
+    const img = document.getElementById('fullscreen-image');
+    if (!viewer || !img) return;
+
+    const onPointerDown = (event) => {
+        if (viewer.style.display !== 'flex') return;
+        if (event.target.closest('.fullscreen-nav, .fullscreen-close')) return;
+        if (event.pointerType === 'mouse' && event.button !== 0) return;
+
+        isSwiping = true;
+        activePointerId = event.pointerId;
+        swipeStartX = event.clientX;
+        img.style.transition = 'none';
+        viewer.setPointerCapture(event.pointerId);
+    };
+
+    const onPointerMove = (event) => {
+        if (!isSwiping || event.pointerId !== activePointerId) return;
+        event.preventDefault();
+        const deltaX = event.clientX - swipeStartX;
+        img.style.transform = `translateX(${deltaX}px)`;
+    };
+
+    const onPointerEnd = (event) => {
+        if (!isSwiping || event.pointerId !== activePointerId) return;
+
+        const deltaX = event.clientX - swipeStartX;
+        isSwiping = false;
+        if (viewer.hasPointerCapture(event.pointerId)) {
+            viewer.releasePointerCapture(event.pointerId);
+        }
+        activePointerId = null;
+
+        img.style.transition = 'transform 0.2s ease';
+        img.style.transform = 'translateX(0)';
+
+        if (Math.abs(deltaX) >= SWIPE_THRESHOLD) {
+            navigateImage(deltaX < 0 ? 1 : -1);
+        }
+    };
+
+    viewer.addEventListener('pointerdown', onPointerDown);
+    viewer.addEventListener('pointermove', onPointerMove, { passive: false });
+    viewer.addEventListener('pointerup', onPointerEnd);
+    viewer.addEventListener('pointercancel', onPointerEnd);
+    viewer.addEventListener('pointerleave', onPointerEnd);
+
+    swipeInitialized = true;
 }
 
 function closeAlbum() {
@@ -244,6 +314,14 @@ document.addEventListener('keydown', function(event) {
         }
     } else if (modal.style.display === 'flex' && event.key === 'Escape') {
         closeAlbum();
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const gallerySection = document.getElementById('gallery');
+    const servicesSection = document.getElementById('services');
+    if (gallerySection && servicesSection && servicesSection.parentNode) {
+        servicesSection.parentNode.insertBefore(gallerySection, servicesSection);
     }
 });
 
@@ -1090,6 +1168,8 @@ window.addEventListener('scroll', function() {
             background: rgba(0, 0, 0, 0.95);
             align-items: center;
             justify-content: center;
+            touch-action: none;
+            overscroll-behavior: contain;
         }
 
         .fullscreen-viewer img {
@@ -1097,6 +1177,8 @@ window.addEventListener('scroll', function() {
             max-height: 95%;
             object-fit: contain;
             box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+            touch-action: pan-y;
+            cursor: grab;
         }
 
         .fullscreen-close {
