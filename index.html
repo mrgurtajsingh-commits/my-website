@@ -1,3 +1,29 @@
+<script>
+// Force favicon even when document markup is malformed.
+(function () {
+    var faviconHref = './images/logos/khanda-blue-logo.png?v=3';
+    function applyFavicon() {
+        var head = document.head || document.getElementsByTagName('head')[0];
+        if (!head) return false;
+        var rels = ['icon', 'shortcut icon', 'apple-touch-icon'];
+        for (var i = 0; i < rels.length; i++) {
+            var selector = 'link[rel="' + rels[i] + '"]';
+            var link = document.querySelector(selector);
+            if (!link) {
+                link = document.createElement('link');
+                link.setAttribute('rel', rels[i]);
+                head.appendChild(link);
+            }
+            link.setAttribute('href', faviconHref);
+            link.setAttribute('type', 'image/png');
+        }
+        return true;
+    }
+    if (!applyFavicon()) {
+        document.addEventListener('DOMContentLoaded', applyFavicon);
+    }
+})();
+</script>
 </div>
     </div>
 
@@ -347,7 +373,7 @@ window.addEventListener('scroll', function() {
         gtag('js', new Date());
         gtag('config', 'G-54D7LD2Y0H');
     </script>
-    <link rel="icon" href="images/logos/khanda blue logo.png" type="image/png">
+    <link rel="icon" href="images/logos/khanda-blue-logo.png?v=3" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Gurudwara Singh Sabha Mata Jeet Kaur Ji in Pagalochori, Crete, Greece. A place of Sikh worship, community, and langar service. All faiths welcome. Daily prayers, Sunday Diwan, and Gurbani classes.">
@@ -356,7 +382,7 @@ window.addEventListener('scroll', function() {
     <meta property="og:title" content="Gurudwara Singh Sabha - Mata Jeet Kaur Ji, Greece">
     <meta property="og:description" content="Welcome to our spiritual home in Crete, Greece. A place of worship, community, and service where all are welcome.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/logos/khanda blue logo.png">
+    <meta property="og:image" content="images/logos/khanda-blue-logo.png">
     <title>GURUDWARA SINGH SABHA - Greece</title>
     <style>
         * {
